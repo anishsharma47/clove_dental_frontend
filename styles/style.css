@@ -208,14 +208,17 @@ p {
   overflow: hidden;
   background: var(--color-secondary);
   font-family: Figtree;
-  padding: 10px 0;
+  max-width: 1440px;
+  margin: 0px auto;
+  padding: 10px 40px;
 }
 
 .marquee-content {
   display: flex;
   gap: 40px;
   animation: scrollMarquee 30s linear infinite;
-  width: max-content;
+  max-width: 1440px;
+  margin: 0px auto !important;
 }
 
 .item {
