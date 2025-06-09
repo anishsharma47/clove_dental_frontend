@@ -4,7 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <link rel="icon" href="./assets/images/pngs/logo.png" type="image/png">
+  <title>Clove Dental</title>
+
+  <!-- STYLESHEET CONFIG -->
   <link rel="stylesheet" href="/styles/common.css" />
   <link rel="stylesheet" href="/styles/style.css" />
 </head>
@@ -34,7 +37,10 @@
   <section class=" section-bg-color">
     <div class="hero wrapper">
       <div class="hero-left">
-        <img src="./assets/images/pngs/hero_section_img.png" alt="" />
+        <picture>
+          <source srcset="./assets/images/pngs/hero_section_img_mobile.png" media="(max-width: 568px)">
+          <img src="./assets/images/pngs/hero_section_img.png" alt="Hero Image">
+        </picture>
       </div>
       <div class="hero-right">
         <h2>Get Expert Dental Guidance in Delhi</h2>
@@ -107,7 +113,7 @@
     </div>
   </div>
 
-  <div class="hero-right show-in-mobile">
+  <div class="hero-right show-in-mobile wrapper">
     <h2>Get Expert Dental Guidance in Delhi</h2>
     <p>
       Book your free consultation today and take the first step towards
@@ -190,10 +196,9 @@
       </div>
   </section>
 
-
   <!-- REAL SMILES SECTION -->
   <section class="smile-gallery wrapper">
-  
+
     <h2>Real Smiles, Real Transformations</h2>
     <p>See the life-changing results our dental implant patients enjoy</p>
 
@@ -376,8 +381,6 @@
     </div>
 
   </section>
-
-
   <!-- INNOVATION SECTION -->
   <section class="wrapper">
     <div class="heading-section">
@@ -482,11 +485,9 @@
 </body>
 <script>
   const buttons = document.querySelectorAll('.faq button');
-
   buttons.forEach(button => {
     button.addEventListener('click', () => {
       const parent = button.parentElement;
-
 
       document.querySelectorAll('.faq').forEach(faq => {
         if (faq !== parent) {
@@ -494,8 +495,6 @@
           faq.querySelector('span').textContent = '+';
         }
       });
-
-
       parent.classList.toggle('active');
       const icon = button.querySelector('span');
       icon.textContent = parent.classList.contains('active') ? '−' : '+';
