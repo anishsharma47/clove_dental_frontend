@@ -769,6 +769,9 @@ p {
   .footer-links {
     margin-top: 40px;
   }
+  .footer-container {
+    justify-content: center !important;
+  }
 }
 
 @keyframes scrollMarquee {
